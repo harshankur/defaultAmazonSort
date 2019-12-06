@@ -5,8 +5,11 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log('The color is green.');
+  chrome.storage.sync.set({sort: 'customerReview'}, function() {
+    console.log('Default sort is set to Avg. Customer Review');
+  });
+  chrome.storage.sync.set({order: {featured: 0, lowToHigh: 1, highToLow: 2, customerReview: 3, newestArrivals: 4}}, function() {
+    console.log('Sort order dictionary');
   });
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
