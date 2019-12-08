@@ -17,7 +17,7 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: 'www.amazon.com'},
+        pageUrl: {},
       })],
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
@@ -25,12 +25,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, info, tab) {
-  // if (info.status === 'complete' && /some_reg_ex_pattern/.test(tab.url)) {
-  //     // ...
-  // }
-  // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.executeScript(
         tabId,
         {file: 'content.js'});
-  // });
 });
