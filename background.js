@@ -11,6 +11,9 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({order: {featured: 0, lowToHigh: 1, highToLow: 2, customerReview: 3, newestArrivals: 4}}, function() {
     console.log('Sort order dictionary');
   });
+  chrome.storage.sync.set({sortOrderMap: {featured: 'relevanceblender', lowToHigh: 'price-asc-rank', highToLow: 'price-desc-rank', customerReview: 'review-rank', newestArrivals: 'date-desc-rank'}}, function () {
+    console.log('Sort Order Map built')
+  })
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
@@ -19,4 +22,15 @@ chrome.runtime.onInstalled.addListener(function() {
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
   });
+});
+
+chrome.tabs.onUpdated.addListener(function(tabId, info, tab) {
+  // if (info.status === 'complete' && /some_reg_ex_pattern/.test(tab.url)) {
+  //     // ...
+  // }
+  // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.executeScript(
+        tabId,
+        {file: 'content.js'});
+  // });
 });

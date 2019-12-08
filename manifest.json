@@ -2,7 +2,7 @@
   "name": "Default Amazon Sort",
   "version": "1.0",
   "description": "Extension to change the default sorting method for product searches on Amazon websites.",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "http://*/", "https://*/"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
