@@ -14,6 +14,9 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({sortOrderMap: {featured: 'relevanceblender', lowToHigh: 'price-asc-rank', highToLow: 'price-desc-rank', customerReview: 'review-rank', newestArrivals: 'date-desc-rank'}}, function () {
     console.log('Sort Order Map built')
   })
+  chrome.storage.sync.set({extensionEnabled: true}, function() {
+    console.log(`extensionEnabled is set to true`);
+  })
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
@@ -27,5 +30,6 @@ chrome.runtime.onInstalled.addListener(function() {
 chrome.tabs.onUpdated.addListener(function(tabId, info, tab) {
     chrome.tabs.executeScript(
         tabId,
-        {file: 'content.js'});
+        {file: 'content.js'},
+        () => chrome.runtime.lastError);
 });
