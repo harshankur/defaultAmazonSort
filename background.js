@@ -13,11 +13,6 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({extensionEnabled: true}, function() {
     console.log(`extensionEnabled is set to true`);
   })
-  chrome.runtime.getPlatformInfo(function(info) {
-      chrome.storage.sync.set({os: info.os}, function() {
-        console.log(`os is ${info.os}`);
-      })
-  });
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({

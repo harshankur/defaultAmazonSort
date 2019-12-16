@@ -4,11 +4,6 @@ let changeSort = document.getElementById('changeSort');
 let extensionEnabledCheckbox = document.getElementById('extensionEnabled');
 let sortDictionary;
 
-chrome.storage.sync.get('os', function(data) {
-    if (data.os == 'mac')
-        document.getElementById('newSpacesIfNotMac').style.display = 'none';
-})
-
 chrome.storage.sync.get('order', function(data) {
     sortDictionary = data.order;
     chrome.storage.sync.get('sort', function(data) {
