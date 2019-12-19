@@ -1,0 +1,79 @@
+{
+    "arabic": {
+        "featured": "الخيارات المميزة",
+        "lowToHigh": "السعر: من الأقل إلى الأكثر",
+        "highToLow": "السعر: من الأكثر إلى الأقل",
+        "customerReview": "معدل التقييم",
+        "newestArrivals": "أحدث ما وصل"
+    },
+    "dutch": {
+        "featured": "Uitgelicht",
+        "lowToHigh": "Prijs: laag naar hoog",
+        "highToLow": "Prijs: hoog naar laag",
+        "customerReview": "Gem. klantenrecensie",
+        "newestArrivals": "Nieuw binnen!"
+    },
+    "english": {
+        "featured": "Featured",
+        "lowToHigh": "Price: Low to High",
+        "highToLow": "Price: High to Low",
+        "customerReview": "Avg. Customer Review",
+        "newestArrivals": "Newest Arrivals"
+    },
+    "french": {
+        "featured": "Amazon présente",
+        "lowToHigh": "Prix : par ordre croissant",
+        "highToLow": "Prix : par ordre décroissant",
+        "customerReview": "Note moyenne des commentaires",
+        "newestArrivals": "Dernières nouveautés"
+    },
+    "german": {
+        "featured": "Amazon präsentiert",
+        "lowToHigh": "Preis: aufsteigend",
+        "highToLow": "Preis: absteigend",
+        "customerReview": "Kundenbewertung",
+        "newestArrivals": "Neu eingetroffen"
+    },
+    "hindi": {
+        "featured": "विशेष",
+        "lowToHigh": "कीमत: कम से ज्यादा",
+        "highToLow": "कीमत: ज्यादा से कम",
+        "customerReview": "औसत ग्राहक रेटिंग",
+        "newestArrivals": "नवीनतम आए हुए सामान"
+    },
+    "italian": {
+        "featured": "Suggeriti",
+        "lowToHigh": "Prezzo: crescente",
+        "highToLow": "Prezzo: decrescente",
+        "customerReview": "Media recensioni clienti",
+        "newestArrivals": "Ultimi arrivi"
+    },
+    "japanese": {
+        "featured": "アマゾンおすすめ商品",
+        "lowToHigh": "価格の安い順番",
+        "highToLow": "価格の高い順番",
+        "customerReview": "レビューの評価順",
+        "newestArrivals": "最新商品"
+    },
+    "portuguese": {
+        "featured": "Destaques",
+        "lowToHigh": "Preço: baixo a alto",
+        "highToLow": "Preço: alto a baixo",
+        "customerReview": "Avaliação dos clientes (média)",
+        "newestArrivals": "Produtos mais novos"
+    },
+    "spanish": {
+        "featured": "Destacados",
+        "lowToHigh": "Precio: de más bajo a más alto",
+        "highToLow": "Precio: de más alto a más bajo",
+        "customerReview": "Valoración media de los clientes",
+        "newestArrivals": "Novedades"
+    },
+    "turkish": {
+        "featured": "Amazon sunar",
+        "lowToHigh": "Fiyat: Düşükten Yükseğe",
+        "highToLow": "Fiyat: Yüksekten Düşüğe",
+        "customerReview": "Müşteri Yorumu",
+        "newestArrivals": "En Yeniler"
+    }
+}
