@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "Amazon sunar"
+    },
+    "lowToHigh": {
+        "message": "Fiyat: Düşükten Yükseğe"
+    },
+    "highToLow": {
+        "message": "Fiyat: Yüksekten Düşüğe"
+    },
+    "customerReview": {
+        "message": "Müşteri Yorumu"
+    },
+    "newestArrivals": {
+        "message": "En Yeniler"
+    }
+}

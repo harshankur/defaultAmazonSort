@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "Amazon präsentiert"
+    },
+    "lowToHigh": {
+        "message": "Preis: aufsteigend"
+    },
+    "highToLow": {
+        "message": "Preis: absteigend"
+    },
+    "customerReview": {
+        "message": "Kundenbewertung"
+    },
+    "newestArrivals": {
+        "message": "Neu eingetroffen"
+    }
+}

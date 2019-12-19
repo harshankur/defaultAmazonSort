@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "アマゾンおすすめ商品"
+    },
+    "lowToHigh": {
+        "message": "価格の安い順番"
+    },
+    "highToLow": {
+        "message": "価格の高い順番"
+    },
+    "customerReview": {
+        "message": "レビューの評価順"
+    },
+    "newestArrivals": {
+        "message": "最新商品"
+    }
+}

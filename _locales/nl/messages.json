@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "Uitgelicht"
+    },
+    "lowToHigh": {
+        "message": "Prijs: laag naar hoog"
+    },
+    "highToLow": {
+        "message": "Prijs: hoog naar laag"
+    },
+    "customerReview": {
+        "message": "Gem. klantenrecensie"
+    },
+    "newestArrivals": {
+        "message": "Nieuw binnen!"
+    }
+}

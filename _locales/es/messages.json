@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "Destacados"
+    },
+    "lowToHigh": {
+        "message": "Precio: de más bajo a más alto"
+    },
+    "highToLow": {
+        "message": "Precio: de más alto a más bajo"
+    },
+    "customerReview": {
+        "message": "Valoración media de los clientes"
+    },
+    "newestArrivals": {
+        "message": "Novedades"
+    }
+}

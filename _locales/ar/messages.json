@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "الخيارات المميزة"
+    },
+    "lowToHigh": {
+        "message": "السعر: من الأقل إلى الأكثر"
+    },
+    "highToLow": {
+        "message": "السعر: من الأكثر إلى الأقل"
+    },
+    "customerReview": {
+        "message": "معدل التقييم"
+    },
+    "newestArrivals": {
+        "message": "أحدث ما وصل"
+    }
+}

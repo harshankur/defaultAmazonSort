@@ -23,5 +23,6 @@
     "48": "images/das48.png",
     "128": "images/das128.png"
   },
+  "manifest_version": 2,
   "default_locale": "en"
 }

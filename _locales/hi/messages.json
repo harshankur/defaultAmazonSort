@@ -1,0 +1,17 @@
+{
+    "featured": {
+        "message": "विशेष"
+    },
+    "lowToHigh": {
+        "message": "कीमत: कम से ज्यादा"
+    },
+    "highToLow": {
+        "message": "कीमत: ज्यादा से कम"
+    },
+    "customerReview": {
+        "message": "औसत ग्राहक रेटिंग"
+    },
+    "newestArrivals": {
+        "message": "नवीनतम आए हुए सामान"
+    }
+}
