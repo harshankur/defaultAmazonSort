@@ -27,7 +27,8 @@ extensionEnabledCheckbox.addEventListener('change', function() {
     })
 })
 
-// Localisation of options
+// Localisation
+document.getElementById('changeSortLabel').innerText = chrome.i18n.getMessage('changeSortLabel');
 document.getElementById('featured').innerText = chrome.i18n.getMessage('featured');
 document.getElementById('lowToHigh').innerText = chrome.i18n.getMessage('lowToHigh');
 document.getElementById('highToLow').innerText = chrome.i18n.getMessage('highToLow');

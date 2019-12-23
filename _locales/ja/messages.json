@@ -1,4 +1,13 @@
 {
+    "appName": {
+        "message": "アマゾンでデフォルトの並べ順"
+    },
+    "appDesc": {
+        "message": "アマゾンで商品を検索した結果のデフォルトの並べ順を変更できるようなChromeエクステンションです。"
+    },
+    "changeSortLabel": {
+        "message": "デフォルトの並べ順"
+    },
     "featured": {
         "message": "アマゾンおすすめ商品"
     },
