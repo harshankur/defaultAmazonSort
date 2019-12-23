@@ -1,4 +1,13 @@
 {
+    "appName": {
+        "message": "Default Amazon Sort"
+    },
+    "appDesc": {
+        "message": "Extension to change the default sorting method for product searches on Amazon websites."
+    },
+    "changeSortLabel": {
+        "message": "Default Sort Order"
+    },
     "featured": {
         "message": "विशेष"
     },
