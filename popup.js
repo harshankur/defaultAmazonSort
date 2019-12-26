@@ -18,6 +18,12 @@ chrome.storage.sync.get('extensionEnabled', function(data) {
 changeSort.addEventListener('change', function() {
     chrome.storage.sync.set({sort: changeSort.options[changeSort.selectedIndex].value}, function() {
         console.log(`Default sort order changed to ${changeSort.options[changeSort.selectedIndex].value}`);
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id,
+                {file: 'content.js'},
+                () => chrome.runtime.lastError);
+          });
     })
 })
 
