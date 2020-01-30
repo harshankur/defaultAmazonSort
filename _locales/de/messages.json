@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "Neu eingetroffen"
+    },
+    "switchLabel": {
+        "message": "OFF/ON"
     }
 }

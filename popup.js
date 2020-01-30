@@ -40,3 +40,4 @@ document.getElementById('lowToHigh').innerText = chrome.i18n.getMessage('lowToHi
 document.getElementById('highToLow').innerText = chrome.i18n.getMessage('highToLow');
 document.getElementById('customerReview').innerText = chrome.i18n.getMessage('customerReview');
 document.getElementById('newestArrivals').innerText = chrome.i18n.getMessage('newestArrivals');
+document.getElementById('switchLabel').innerText = chrome.i18n.getMessage('switchLabel');

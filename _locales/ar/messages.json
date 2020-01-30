@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "أحدث ما وصل"
+    },
+    "switchLabel": {
+        "message": "OFF/ON"
     }
 }

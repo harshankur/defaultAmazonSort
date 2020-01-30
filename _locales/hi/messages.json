@@ -1,12 +1,12 @@
 {
     "appName": {
-        "message": "Default Amazon Sort"
+        "message": "ऐमज़ान क्रम परिवर्तन"
     },
     "appDesc": {
-        "message": "Extension to change the default sorting method for product searches on Amazon websites."
+        "message": "ऐमज़ान के वेबसाईट पर आपके खोजे हुए समान के परिणाम वास्तविकता में ऐमज़ान के तय किए हुए क्रम में दिखाए जाते हैं। इस दुविधा को दूर करने के लिए ये Google Chrome के इक्स्टेन्शन का प्रयोग करें। "
     },
     "changeSortLabel": {
-        "message": "Default Sort Order"
+        "message": "पसंदीदा क्रम"
     },
     "featured": {
         "message": "विशेष"
@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "नवीनतम आए हुए सामान"
+    },
+    "switchLabel": {
+        "message": "OFF/ON"
     }
 }

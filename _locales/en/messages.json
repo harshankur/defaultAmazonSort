@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "Newest Arrivals"
+    },
+    "switchLabel": {
+        "message": "OFF/ON"
     }
 }

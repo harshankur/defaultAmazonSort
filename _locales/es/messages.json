@@ -1,12 +1,12 @@
 {
     "appName": {
-        "message": "Default Amazon Sort"
+        "message": "Orden por defecto de Amazon"
     },
     "appDesc": {
-        "message": "Extension to change the default sorting method for product searches on Amazon websites."
+        "message": "Extensión para cambiar el método de ordenación por defecto para búsqueda de productos en las páginas web de Amazon."
     },
     "changeSortLabel": {
-        "message": "Default Sort Order"
+        "message": "Orden por defecto"
     },
     "featured": {
         "message": "Destacados"
@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "Novedades"
+    },
+    "switchLabel": {
+        "message": "OFF/ON"
     }
 }

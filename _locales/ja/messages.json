@@ -22,5 +22,8 @@
     },
     "newestArrivals": {
         "message": "最新商品"
+    },
+    "switchLabel": {
+        "message": "オフ・オン"
     }
 }
