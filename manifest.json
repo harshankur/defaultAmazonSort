@@ -1,7 +1,7 @@
 {
   "name": "__MSG_appName__",
   "short_name": "DAS",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "__MSG_appDesc__",
   "permissions": ["activeTab", "declarativeContent", "storage", "https://www.amazon.cn/*", "https://www.amazon.in/*", "https://www.amazon.co.jp/*", "https://www.amazon.com.sg/*", "https://www.amazon.com.tr/*", "https://www.amazon.ae/*", "https://www.amazon.fr/*", "https://www.amazon.de/*", "https://www.amazon.it/*", "https://www.amazon.nl/*", "https://www.amazon.es/*", "https://www.amazon.uk/*", "https://www.amazon.ca/*", "https://www.amazon.com.mx/*", "https://www.amazon.com/*", "https://www.amazon.com.au/*", "https://www.amazon.com.br/*"],
   "background": {
