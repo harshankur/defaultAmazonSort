@@ -1,6 +1,7 @@
 'use strict';
 
 let changeSort = document.getElementById('changeSort');
+let primeOnlyEnabledCheckbox = document.getElementById('primeOnlyEnabled');
 let extensionEnabledCheckbox = document.getElementById('extensionEnabled');
 let sortDictionary;
 
@@ -9,6 +10,10 @@ chrome.storage.sync.get('order', function(data) {
     chrome.storage.sync.get('sort', function(data) {
         changeSort.getElementsByTagName('option')[sortDictionary[data.sort]].selected = 'selected';
     });
+})
+
+chrome.storage.sync.get('primeOnlyEnabled', function(data) {
+    primeOnlyEnabledCheckbox.checked = data.primeOnlyEnabled;
 })
 
 chrome.storage.sync.get('extensionEnabled', function(data) {
@@ -27,9 +32,27 @@ changeSort.addEventListener('change', function() {
     })
 })
 
+primeOnlyEnabledCheckbox.addEventListener('change', function() {
+    chrome.storage.sync.set({primeOnlyEnabled: primeOnlyEnabledCheckbox.checked}, function() {
+        console.log(`primeOnlyEnabled is set to ${primeOnlyEnabledCheckbox.checked}`);
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id,
+                {file: 'content.js'},
+                () => chrome.runtime.lastError);
+          });
+    })
+})
+
 extensionEnabledCheckbox.addEventListener('change', function() {
     chrome.storage.sync.set({extensionEnabled: extensionEnabledCheckbox.checked}, function() {
         console.log(`extensionEnabled is set to ${extensionEnabledCheckbox.checked}`);
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.executeScript(
+                tabs[0].id,
+                {file: 'content.js'},
+                () => chrome.runtime.lastError);
+          });
     })
 })
 
@@ -40,4 +63,5 @@ document.getElementById('lowToHigh').innerText = chrome.i18n.getMessage('lowToHi
 document.getElementById('highToLow').innerText = chrome.i18n.getMessage('highToLow');
 document.getElementById('customerReview').innerText = chrome.i18n.getMessage('customerReview');
 document.getElementById('newestArrivals').innerText = chrome.i18n.getMessage('newestArrivals');
+document.getElementById('primeOnlyLabel').innerText = chrome.i18n.getMessage('primeOnlyLabel');
 document.getElementById('switchLabel').innerText = chrome.i18n.getMessage('switchLabel');

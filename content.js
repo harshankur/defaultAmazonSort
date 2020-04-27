@@ -1,5 +1,10 @@
 chrome.storage.sync.get('extensionEnabled', function (data) {
     if (data.extensionEnabled == true && window.location.pathname == '/s') {
+        chrome.storage.sync.get('primeOnlyEnabled', function (data) {
+            if (document.querySelectorAll('[type= checkbox]')[0].checked != data.primeOnlyEnabled) {
+                document.querySelectorAll('[type= checkbox]')[0].click();
+            }
+        })
         chrome.storage.sync.get('order', function (order) {
             chrome.storage.sync.get('sortOrderMap', function (sortOrderMap) {
                 chrome.storage.sync.get('sort', function (data) {

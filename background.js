@@ -10,6 +10,9 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({sortOrderMap: {featured: 'relevanceblender', lowToHigh: 'price-asc-rank', highToLow: 'price-desc-rank', customerReview: 'review-rank', newestArrivals: 'date-desc-rank'}}, function () {
     console.log('Sort Order Map built')
   })
+  chrome.storage.sync.set({primeOnlyEnabled: false}, function() {
+    console.log(`primeOnly is set to false`);
+  })
   chrome.storage.sync.set({extensionEnabled: true}, function() {
     console.log(`extensionEnabled is set to true`);
   })

@@ -23,6 +23,9 @@
     "newestArrivals": {
         "message": "最新商品"
     },
+    "primeOnlyLabel": {
+        "message": "Prime Only"
+    },
     "switchLabel": {
         "message": "オフ・オン"
     }
