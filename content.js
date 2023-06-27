@@ -1,21 +1,27 @@
-chrome.storage.sync.get('extensionEnabled', function (data) {
-    if (data.extensionEnabled == true && window.location.pathname == '/s') {
-        chrome.storage.sync.get('primeOnlyEnabled', function (data) {
-            if (document.querySelectorAll('[type= checkbox]')[0].checked != data.primeOnlyEnabled) {
-                document.querySelectorAll('[type= checkbox]')[0].click();
-            }
-        })
-        chrome.storage.sync.get('order', function (order) {
-            chrome.storage.sync.get('sortOrderMap', function (sortOrderMap) {
-                chrome.storage.sync.get('sort', function (data) {
-                    if (document.getElementsByTagName('SELECT')[1].value != sortOrderMap.sortOrderMap[data.sort]) {
-                        document.getElementsByTagName('SELECT')[1].click();
-                        window.setTimeout(function() {
-                            document.getElementsByTagName('UL')[document.getElementsByTagName('UL').length - 1].children[order.order[data.sort]].children[0].click();
-                        }, 500)
-                    }
-                })
-            })
-        })
-    }
-})
+// Used as enum for all the stored data.
+// Same names will be used in other parts of the code.
+// Controls will have the same names as html element ids in popup.html
+// HACK: Fixed the "Already Declared" error from showing on the Extensions page by not using strict mode and
+//       declaring eStoredData without any const or let declaration.
+eStoredData =
+{
+    changeSort:             "changeSort",
+    extensionEnabled:       "extensionEnabled"
+};
+
+// Get stored data
+chrome.storage.sync.get([eStoredData.changeSort, eStoredData.extensionEnabled], storedData =>
+    {
+        // If basic info does not match, we stop proceeding further
+        if (!storedData[eStoredData.extensionEnabled] || window.location.pathname != "/s")
+            return;
+
+        // Set sort order only if it is not the desired default
+        if (document.getElementsByTagName('select')[1].selectedIndex == storedData[eStoredData.changeSort])
+            return;
+
+        // Open the sort order list and click on the desired default
+        document.getElementsByTagName('select')[1].click();
+        setTimeout(() => document.getElementsByTagName('ul')[document.getElementsByTagName('ul').length - 1].children[storedData[eStoredData.changeSort]].children[0].click(), 300);
+
+    });

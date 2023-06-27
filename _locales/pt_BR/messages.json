@@ -23,9 +23,6 @@
     "newestArrivals": {
         "message": "Produtos mais novos"
     },
-    "primeOnlyLabel": {
-        "message": "Prime"
-    },
     "switchLabel": {
         "message": "Desabilitar/Habilitar"
     }

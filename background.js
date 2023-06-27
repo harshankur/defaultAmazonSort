@@ -1,34 +1,35 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({sort: 'customerReview'}, function() {
-    console.log('Default sort is set to Avg. Customer Review');
-  });
-  chrome.storage.sync.set({order: {featured: 0, lowToHigh: 1, highToLow: 2, customerReview: 3, newestArrivals: 4}}, function() {
-    console.log('Sort order dictionary');
-  });
-  chrome.storage.sync.set({sortOrderMap: {featured: 'relevanceblender', lowToHigh: 'price-asc-rank', highToLow: 'price-desc-rank', customerReview: 'review-rank', newestArrivals: 'date-desc-rank'}}, function () {
-    console.log('Sort Order Map built')
-  })
-  chrome.storage.sync.set({primeOnlyEnabled: true}, function() {
-    console.log(`primeOnly is set to true`);
-  })
-  chrome.storage.sync.set({extensionEnabled: true}, function() {
-    console.log(`extensionEnabled is set to true`);
-  })
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {},
-      })],
-      actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
-  });
-});
+// Used as enum for all the stored data.
+// Same names will be used in other parts of the code.
+// Controls will have the same names as html element ids in popup.html
+const eStoredData =
+{
+    changeSort:             "changeSort",
+    extensionEnabled:       "extensionEnabled"
+};
 
-chrome.tabs.onUpdated.addListener(function(tabId, info, tab) {
-    chrome.tabs.executeScript(
-        tabId,
-        {file: 'content.js'},
-        () => chrome.runtime.lastError);
-});
+// When the extension is installed, we want to initialize our properties with true
+chrome.runtime.onInstalled.addListener(() =>
+    {
+        // Get originally stored data
+        chrome.storage.sync.get([eStoredData.changeSort, eStoredData.extensionEnabled], storedData =>
+        {
+            // Set default sort value to "customerReview" if nothing is found on the storage.
+            chrome.storage.sync.set({ [eStoredData.changeSort]: storedData[eStoredData.changeSort] ?? 3 });
+            // Set toggle to true if no stored data is found.
+            chrome.storage.sync.set({ [eStoredData.extensionEnabled]: storedData[eStoredData.extensionEnabled] ?? true });
+        });
+    });
+
+// When a tab is updated, we want to check with content.js for our extension to work on.
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) =>
+    {
+        if (changeInfo.status == 'complete')
+            chrome.scripting.executeScript(
+                {
+                    target: { tabId: tabId },
+                    files: ['./content.js'],
+                })
+                .catch(err => console.log(err));
+    });

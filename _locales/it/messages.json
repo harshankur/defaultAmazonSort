@@ -23,9 +23,6 @@
     "newestArrivals": {
         "message": "Ultimi arrivi"
     },
-    "primeOnlyLabel": {
-        "message": "Prime"
-    },
     "switchLabel": {
         "message": "Disattivo/Attivo"
     }

@@ -23,9 +23,6 @@
     "newestArrivals": {
         "message": "Newest Arrivals"
     },
-    "primeOnlyLabel": {
-        "message": "Prime"
-    },
     "switchLabel": {
         "message": "OFF/ON"
     }
