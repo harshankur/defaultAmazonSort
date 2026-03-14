@@ -25,5 +25,11 @@
     },
     "switchLabel": {
         "message": "Kapalı/Açık"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "En Çok Satanlar"
     }
 }

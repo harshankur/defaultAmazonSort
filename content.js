@@ -1,27 +1,38 @@
 // Used as enum for all the stored data.
 // Same names will be used in other parts of the code.
 // Controls will have the same names as html element ids in popup.html
-// HACK: Fixed the "Already Declared" error from showing on the Extensions page by not using strict mode and
-//       declaring eStoredData without any const or let declaration.
-eStoredData =
-{
-    changeSort:             "changeSort",
-    extensionEnabled:       "extensionEnabled"
+const eStoredData = {
+    changeSort: "changeSort",
+    extensionEnabled: "extensionEnabled"
 };
 
+const SORT_VALUES = [
+    "relevanceblender",           // Featured
+    "exact-aware-popularity-rank", // Best Sellers
+    "price-asc-rank",             // Price: Low to High
+    "price-desc-rank",            // Price: High to Low
+    "review-rank",                // Avg. Customer Review
+    "date-desc-rank",             // Newest Arrivals
+];
+
+
 // Get stored data
-chrome.storage.sync.get([eStoredData.changeSort, eStoredData.extensionEnabled], storedData =>
-    {
-        // If basic info does not match, we stop proceeding further
-        if (!storedData[eStoredData.extensionEnabled] || window.location.pathname != "/s")
-            return;
+chrome.storage.sync.get([eStoredData.changeSort, eStoredData.extensionEnabled], storedData => {
+    // If extension is disabled or we are not on a search results page, we stop
+    if (!storedData[eStoredData.extensionEnabled] || !window.location.pathname.startsWith("/s")) {
+        return;
+    }
 
-        // Set sort order only if it is not the desired default
-        if (document.getElementsByTagName('select')[1].selectedIndex == storedData[eStoredData.changeSort])
-            return;
+    const currentUrl = new URL(window.location.href);
+    const searchParams = currentUrl.searchParams;
+    const desiredSort = SORT_VALUES[storedData[eStoredData.changeSort] || 0];
+    const currentSort = searchParams.get("s");
 
-        // Open the sort order list and click on the desired default
-        document.getElementsByTagName('select')[1].click();
-        setTimeout(() => document.getElementsByTagName('ul')[document.getElementsByTagName('ul').length - 1].children[storedData[eStoredData.changeSort]].children[0].click(), 300);
-
-    });
+    // Redirect to the correct sort URL if it is not the desired default
+    if (currentSort !== desiredSort) {
+        searchParams.set("s", desiredSort);
+        // Remove 'ref' to ensure a clean navigation and avoid potential Amazon redirect loops
+        searchParams.delete("ref");
+        window.location.href = currentUrl.toString();
+    }
+});

@@ -25,5 +25,11 @@
     },
     "switchLabel": {
         "message": "オフ・オン"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "ベストセラー"
     }
 }

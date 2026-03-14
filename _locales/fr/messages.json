@@ -25,5 +25,11 @@
     },
     "switchLabel": {
         "message": "désactiver/Activer"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "Meilleures ventes"
     }
 }

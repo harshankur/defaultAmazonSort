@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="toggleSwitch.css">
-  </head>
-  <body>
-    <label for="changeSort" id="changeSortLabel"></label>
-    </br>
-    <select id="changeSort">
-      <option id="featured" value="featured"></option>
-      <option id="lowToHigh" value="lowToHigh"></option>
-      <option id="highToLow" value="highToLow"></option>
-      <option id="customerReview" value="customerReview"></option>
-      <option id="newestArrivals" value="newestArrivals"></option>
-    </select>
-    </br>
-    <p style="text-align:left; border-top: gray 1px solid;">
-    </br>
-      <label id="switchLabel"></label>
-      <span style="float:right;">
-        <label class="switch">
-          <input type="checkbox" id="extensionEnabled">
-          <span class="slider round"></span>
-        </label>
-      </span>
-    </p>
+    <title>Amazon Smart Sort</title>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="images/das48.png" alt="DAS Logo">
+        <div class="title" id="appName" data-i18n="appName"></div>
+    </div>
+
+    <div class="section">
+        <div class="label-group">
+            <label class="label-title" id="changeSortLabel" data-i18n="changeSortLabel"></label>
+        </div>
+        <select id="changeSort">
+            <option id="featured" value="featured" data-i18n="featured"></option>
+            <option id="bestSellers" value="bestSellers" data-i18n="bestSellers"></option>
+            <option id="lowToHigh" value="lowToHigh" data-i18n="lowToHigh"></option>
+            <option id="highToLow" value="highToLow" data-i18n="highToLow"></option>
+            <option id="customerReview" value="customerReview" data-i18n="customerReview"></option>
+            <option id="newestArrivals" value="newestArrivals" data-i18n="newestArrivals"></option>
+        </select>
+
+    </div>
+
+    <div class="section">
+        <div class="toggle-container">
+            <span class="toggle-text" id="switchLabel" data-i18n="switchLabel"></span>
+            <label class="switch">
+                <input type="checkbox" id="extensionEnabled">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="footer" id="versionLabel" data-i18n="versionLabel">
+        v4.0.0
+    </div>
+
     <script src="popup.js"></script>
-  </body>
+</body>
+
+
+
 </html>
