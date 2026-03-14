@@ -31,5 +31,11 @@
     },
     "bestSellers": {
         "message": "ベストセラー"
+    },
+    "primeOnlyLabel": {
+        "message": "Prime Only"
+    },
+    "feedbackLink": {
+        "message": "Prime Onlyが機能しませんか？ここで地域を報告してください。"
     }
 }

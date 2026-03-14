@@ -109,6 +109,13 @@ select:hover {
     padding: 4px 0;
 }
 
+.toggle-divider {
+    height: 1px;
+    background: var(--glass-border);
+    margin: 8px 0;
+    width: 100%;
+}
+
 .toggle-text {
     font-size: 14px;
     font-weight: 500;

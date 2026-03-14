@@ -6,49 +6,49 @@
 const eStoredData =
 {
     changeSort: "changeSort",
-    extensionEnabled: "extensionEnabled"
+    extensionEnabled: "extensionEnabled",
+    primeOnly: "primeOnly"
 };
 
 // Get the elements on popup html
 const elements = {};
-[eStoredData.changeSort, eStoredData.extensionEnabled].forEach(cntl => elements[cntl] = document.getElementById(cntl));
+[eStoredData.changeSort, eStoredData.extensionEnabled, eStoredData.primeOnly].forEach(cntl => elements[cntl] = document.getElementById(cntl));
 
 // Set correct sort order
 chrome.storage.sync.get([eStoredData.changeSort], storedData => elements[eStoredData.changeSort].selectedIndex = storedData[eStoredData.changeSort]);
 
-// Set toggle switch
+// Set toggle switch (Extension Enabled)
 chrome.storage.sync.get([eStoredData.extensionEnabled], storedData => elements[eStoredData.extensionEnabled].checked = storedData[eStoredData.extensionEnabled]);
+
+// Set toggle switch (Prime Only)
+chrome.storage.sync.get([eStoredData.primeOnly], storedData => elements[eStoredData.primeOnly].checked = storedData[eStoredData.primeOnly]);
+
+// Helper function to trigger content.js to apply new filters
+function notifyAmazonTab() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        if (tabs[0] && tabs[0].url && tabs[0].url.includes("amazon.")) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "apply_filters" })
+                .catch(err => console.log("Content script not ready or error:", err));
+        }
+    });
+}
 
 // Add event listener for change for the select control
 elements[eStoredData.changeSort].addEventListener('change', () => {
     // Store the new value for sort order
-    chrome.storage.sync.set({ [eStoredData.changeSort]: elements[eStoredData.changeSort].selectedIndex }, () => {
-        // Execute script on changes with this value to trigger immediate refresh if on Amazon
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            if (tabs[0] && tabs[0].url && tabs[0].url.includes("amazon.")) {
-                chrome.scripting.executeScript({
-                    target: { tabId: tabs[0].id },
-                    files: ['./content.js'],
-                }).catch(err => console.log(err));
-            }
-        });
-    });
+    chrome.storage.sync.set({ [eStoredData.changeSort]: elements[eStoredData.changeSort].selectedIndex }, notifyAmazonTab);
 });
 
-// Add event listener for change for the toggle control
+// Add event listener for change for the Extension Enable toggle
 elements[eStoredData.extensionEnabled].addEventListener('change', () => {
     // Store the new value for the enable/disable state
-    chrome.storage.sync.set({ [eStoredData.extensionEnabled]: elements[eStoredData.extensionEnabled].checked }, () => {
-        // Execute script on changes with this value to trigger immediate refresh if on Amazon
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            if (tabs[0] && tabs[0].url && tabs[0].url.includes("amazon.")) {
-                chrome.scripting.executeScript({
-                    target: { tabId: tabs[0].id },
-                    files: ['./content.js'],
-                }).catch(err => console.log(err));
-            }
-        });
-    });
+    chrome.storage.sync.set({ [eStoredData.extensionEnabled]: elements[eStoredData.extensionEnabled].checked }, notifyAmazonTab);
+});
+
+// Add event listener for change for the Prime Only toggle
+elements[eStoredData.primeOnly].addEventListener('change', () => {
+    // Store the new value for the Prime Only state
+    chrome.storage.sync.set({ [eStoredData.primeOnly]: elements[eStoredData.primeOnly].checked }, notifyAmazonTab);
 });
 
 // Localisation

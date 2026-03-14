@@ -31,5 +31,11 @@
     },
     "bestSellers": {
         "message": "सबसे अधिक बिकने वाला"
+    },
+    "primeOnlyLabel": {
+        "message": "Prime Only"
+    },
+    "feedbackLink": {
+        "message": "क्या Prime Only काम नहीं कर रहा है? अपने क्षेत्र की रिपोर्ट यहाँ करें।"
     }
 }

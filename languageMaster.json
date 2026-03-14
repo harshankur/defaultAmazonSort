@@ -5,7 +5,9 @@
         "highToLow": "السعر: من الأكثر إلى الأقل",
         "customerReview": "معدل التقييم",
         "newestArrivals": "أحدث ما وصل",
-        "bestSellers": "الأكثر مبيعاً"
+        "bestSellers": "الأكثر مبيعاً",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only لا يعمل؟ الإبلاغ عن منطقتك هنا."
     },
     "dutch": {
         "featured": "Uitgelicht",
@@ -13,7 +15,9 @@
         "highToLow": "Prijs: hoog naar laag",
         "customerReview": "Gem. klantenrecensie",
         "newestArrivals": "Nieuw binnen!",
-        "bestSellers": "Bestverkocht"
+        "bestSellers": "Bestverkocht",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Werkt Prime Only niet? Meld je regio hier."
     },
     "english": {
         "featured": "Featured",
@@ -21,7 +25,9 @@
         "highToLow": "Price: High to Low",
         "customerReview": "Avg. Customer Review",
         "newestArrivals": "Newest Arrivals",
-        "bestSellers": "Best Sellers"
+        "bestSellers": "Best Sellers",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only not working? Report your region here."
     },
     "french": {
         "featured": "Amazon présente",
@@ -29,7 +35,9 @@
         "highToLow": "Prix : par ordre décroissant",
         "customerReview": "Note moyenne des commentaires",
         "newestArrivals": "Dernières nouveautés",
-        "bestSellers": "Meilleures ventes"
+        "bestSellers": "Meilleures ventes",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only ne fonctionne pas ? Signalez votre région ici."
     },
     "german": {
         "featured": "Amazon präsentiert",
@@ -37,7 +45,9 @@
         "highToLow": "Preis: absteigend",
         "customerReview": "Kundenbewertung",
         "newestArrivals": "Neu eingetroffen",
-        "bestSellers": "Bestseller"
+        "bestSellers": "Bestseller",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only funktioniert nicht? Melden Sie Ihre Region hier."
     },
     "hindi": {
         "featured": "विशेष",
@@ -45,7 +55,9 @@
         "highToLow": "कीमत: ज्यादा से कम",
         "customerReview": "औसत ग्राहक रेटिंग",
         "newestArrivals": "नवीनतम आए हुए सामान",
-        "bestSellers": "सबसे अधिक बिकने वाला"
+        "bestSellers": "सबसे अधिक बिकने वाला",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "क्या Prime Only काम नहीं कर रहा है? अपने क्षेत्र की रिपोर्ट यहाँ करें।"
     },
     "italian": {
         "featured": "Suggeriti",
@@ -53,7 +65,9 @@
         "highToLow": "Prezzo: decrescente",
         "customerReview": "Media recensioni clienti",
         "newestArrivals": "Ultimi arrivi",
-        "bestSellers": "I più venduti"
+        "bestSellers": "I più venduti",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only non funziona? Segnala la tua regione qui."
     },
     "japanese": {
         "featured": "アマゾンおすすめ商品",
@@ -61,7 +75,9 @@
         "highToLow": "価格の高い順番",
         "customerReview": "レビューの評価順",
         "newestArrivals": "最新商品",
-        "bestSellers": "ベストセラー"
+        "bestSellers": "ベストセラー",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Onlyが機能しませんか？ここで地域を報告してください。"
     },
     "portuguese": {
         "featured": "Destaques",
@@ -69,7 +85,9 @@
         "highToLow": "Preço: alto a baixo",
         "customerReview": "Avaliação dos clientes (média)",
         "newestArrivals": "Produtos mais novos",
-        "bestSellers": "Mais vendidos"
+        "bestSellers": "Mais vendidos",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only não está funcionando? Informe sua região aqui."
     },
     "spanish": {
         "featured": "Destacados",
@@ -77,7 +95,9 @@
         "highToLow": "Precio: de mais alto a mais baixo",
         "customerReview": "Valoración media de los clientes",
         "newestArrivals": "Novedades",
-        "bestSellers": "Los más vendidos"
+        "bestSellers": "Los más vendidos",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "¿Prime Only no funciona? Reporta tu región aquí."
     },
     "turkish": {
         "featured": "Amazon sunar",
@@ -85,6 +105,8 @@
         "highToLow": "Fiyat: Yüksekten Düşüğe",
         "customerReview": "Müşteri Yorumu",
         "newestArrivals": "En Yeniler",
-        "bestSellers": "En Çok Satanlar"
+        "bestSellers": "En Çok Satanlar",
+        "primeOnly": "Prime Only",
+        "feedbackLink": "Prime Only çalışmıyor mu? Bölgenizi buradan bildirin."
     }
 }

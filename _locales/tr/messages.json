@@ -31,5 +31,11 @@
     },
     "bestSellers": {
         "message": "En Çok Satanlar"
+    },
+    "primeOnlyLabel": {
+        "message": "Prime Only"
+    },
+    "feedbackLink": {
+        "message": "Prime Only çalışmıyor mu? Bölgenizi buradan bildirin."
     }
 }

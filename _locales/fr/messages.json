@@ -31,5 +31,11 @@
     },
     "bestSellers": {
         "message": "Meilleures ventes"
+    },
+    "primeOnlyLabel": {
+        "message": "Prime Only"
+    },
+    "feedbackLink": {
+        "message": "Prime Only ne fonctionne pas ? Signalez votre région ici."
     }
 }

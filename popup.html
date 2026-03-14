@@ -31,6 +31,14 @@
 
     <div class="section">
         <div class="toggle-container">
+            <span class="toggle-text" id="primeOnlyLabel" data-i18n="primeOnlyLabel">Prime Only</span>
+            <label class="switch">
+                <input type="checkbox" id="primeOnly">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-divider"></div>
+        <div class="toggle-container">
             <span class="toggle-text" id="switchLabel" data-i18n="switchLabel"></span>
             <label class="switch">
                 <input type="checkbox" id="extensionEnabled">
@@ -39,8 +47,12 @@
         </div>
     </div>
 
-    <div class="footer" id="versionLabel" data-i18n="versionLabel">
-        v4.0.0
+    <div class="footer">
+        <span id="versionLabel" data-i18n="versionLabel">v4.0.0</span>
+        <br><br>
+        <a href="mailto:harshankur@outlook.com?subject=Default%20Amazon%20Sort&colon;%20Missing%20region%20for%20Prime%20Only"
+            style="color: var(--accent-cyan); text-decoration: none;" id="feedbackLink" data-i18n="feedbackLink">Report
+            Missing Region</a>
     </div>
 
     <script src="popup.js"></script>
