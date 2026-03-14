@@ -1,0 +1,41 @@
+{
+    "appName": {
+        "message": "Standard Amazon Sortering"
+    },
+    "appDesc": {
+        "message": "Tillägg för att ändra standard sorteringsmetod för produktsökningar på Amazons webbplatser."
+    },
+    "changeSortLabel": {
+        "message": "Standard Sorteringsordning"
+    },
+    "featured": {
+        "message": "Utvalda"
+    },
+    "lowToHigh": {
+        "message": "Pris: Lågt till högt"
+    },
+    "highToLow": {
+        "message": "Pris: Högt till lågt"
+    },
+    "customerReview": {
+        "message": "Genomsnittligt kundbetyg"
+    },
+    "newestArrivals": {
+        "message": "Nyheter"
+    },
+    "switchLabel": {
+        "message": "AV/PÅ"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "Storsäljare"
+    },
+    "primeOnlyLabel": {
+        "message": "Endast Prime"
+    },
+    "feedbackLink": {
+        "message": "Fungerar inte Prime Only? Rapportera din region här."
+    }
+}

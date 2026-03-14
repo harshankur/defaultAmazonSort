@@ -108,5 +108,35 @@
         "bestSellers": "En Çok Satanlar",
         "primeOnly": "Prime Only",
         "feedbackLink": "Prime Only çalışmıyor mu? Bölgenizi buradan bildirin."
+    },
+    "chinese": {
+        "featured": "推荐",
+        "lowToHigh": "价格：由低到高",
+        "highToLow": "价格：由高到低",
+        "customerReview": "平均买家评价",
+        "newestArrivals": "最新上架",
+        "bestSellers": "畅销商品",
+        "primeOnly": "仅限 Prime",
+        "feedbackLink": "Prime Only 无法使用？在此报告您的地区。"
+    },
+    "polish": {
+        "featured": "Polecane",
+        "lowToHigh": "Cena: od najniższej do najwyższej",
+        "highToLow": "Cena: od najwyższej do najniższej",
+        "customerReview": "Średnia ocena klienta",
+        "newestArrivals": "Nowości",
+        "bestSellers": "Bestsellery",
+        "primeOnly": "Tylko Prime",
+        "feedbackLink": "Prime Only nie działa? Zgłoś swój region tutaj."
+    },
+    "swedish": {
+        "featured": "Utvalda",
+        "lowToHigh": "Pris: Lågt till högt",
+        "highToLow": "Pris: Högt till lågt",
+        "customerReview": "Genomsnittligt kundbetyg",
+        "newestArrivals": "Nyheter",
+        "bestSellers": "Storsäljare",
+        "primeOnly": "Endast Prime",
+        "feedbackLink": "Fungerar inte Prime Only? Rapportera din region här."
     }
 }

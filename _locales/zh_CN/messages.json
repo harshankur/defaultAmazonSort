@@ -1,0 +1,41 @@
+{
+    "appName": {
+        "message": "默认亚马逊排序"
+    },
+    "appDesc": {
+        "message": "在亚马逊网站上更改商品搜索默认排序方式的扩展程序。"
+    },
+    "changeSortLabel": {
+        "message": "默认排序方式"
+    },
+    "featured": {
+        "message": "推荐"
+    },
+    "lowToHigh": {
+        "message": "价格：由低到高"
+    },
+    "highToLow": {
+        "message": "价格：由高到低"
+    },
+    "customerReview": {
+        "message": "平均买家评价"
+    },
+    "newestArrivals": {
+        "message": "最新上架"
+    },
+    "switchLabel": {
+        "message": "关/开"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "畅销商品"
+    },
+    "primeOnlyLabel": {
+        "message": "仅限 Prime"
+    },
+    "feedbackLink": {
+        "message": "Prime Only 无法使用？在此报告您的地区。"
+    }
+}

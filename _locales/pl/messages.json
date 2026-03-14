@@ -1,0 +1,41 @@
+{
+    "appName": {
+        "message": "Domyślne Sortowanie Amazon"
+    },
+    "appDesc": {
+        "message": "Rozszerzenie zmieniające domyślną metodę sortowania wyników wyszukiwania na stronach Amazon."
+    },
+    "changeSortLabel": {
+        "message": "Domyślna kolejność sortowania"
+    },
+    "featured": {
+        "message": "Polecane"
+    },
+    "lowToHigh": {
+        "message": "Cena: od najniższej do najwyższej"
+    },
+    "highToLow": {
+        "message": "Cena: od najwyższej do najniższej"
+    },
+    "customerReview": {
+        "message": "Średnia ocena klienta"
+    },
+    "newestArrivals": {
+        "message": "Nowości"
+    },
+    "switchLabel": {
+        "message": "WYŁ/WŁ"
+    },
+    "versionLabel": {
+        "message": "v4.0.0"
+    },
+    "bestSellers": {
+        "message": "Bestsellery"
+    },
+    "primeOnlyLabel": {
+        "message": "Tylko Prime"
+    },
+    "feedbackLink": {
+        "message": "Prime Only nie działa? Zgłoś swój region tutaj."
+    }
+}
